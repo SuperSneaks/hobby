@@ -1,4 +1,4 @@
-USE [HuntingApp]
+USE [HuntingAppDB]
 GO
 
 /****** Object:  Table [dbo].[Stands]    Script Date: 3/1/2019 16:34:43 ******/
