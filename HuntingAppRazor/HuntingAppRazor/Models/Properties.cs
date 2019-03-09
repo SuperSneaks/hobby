@@ -7,6 +7,7 @@ namespace HuntingAppRazor.Models
     {
         public Properties()
         {
+            PropertyAccess = new HashSet<PropertyAccess>();
             Stands = new HashSet<Stands>();
         }
 
@@ -17,6 +18,7 @@ namespace HuntingAppRazor.Models
         public string State { get; set; }
         public string Zip { get; set; }
 
+        public virtual ICollection<PropertyAccess> PropertyAccess { get; set; }
         public virtual ICollection<Stands> Stands { get; set; }
     }
 }

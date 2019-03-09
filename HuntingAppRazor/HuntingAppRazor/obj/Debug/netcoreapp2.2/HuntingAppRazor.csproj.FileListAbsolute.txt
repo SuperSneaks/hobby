@@ -30,3 +30,8 @@ C:\Users\sneak\source\repos\HuntingAppRazor\HuntingAppRazor\obj\Debug\netcoreapp
 C:\Users\sneak\source\repos\HuntingAppRazor\HuntingAppRazor\obj\Debug\netcoreapp2.2\HuntingAppRazor.dll
 C:\Users\sneak\source\repos\HuntingAppRazor\HuntingAppRazor\obj\Debug\netcoreapp2.2\HuntingAppRazor.pdb
 C:\Users\sneak\source\repos\HuntingAppRazor\HuntingAppRazor\obj\Debug\netcoreapp2.2\HuntingAppRazor.csproj.CopyComplete
+C:\Users\sneak\source\repos\HuntingAppRazor\HuntingAppRazor\obj\Debug\netcoreapp2.2\Razor\Pages\Hunting\Create.g.cshtml.cs
+C:\Users\sneak\source\repos\HuntingAppRazor\HuntingAppRazor\obj\Debug\netcoreapp2.2\Razor\Pages\Hunting\Delete.g.cshtml.cs
+C:\Users\sneak\source\repos\HuntingAppRazor\HuntingAppRazor\obj\Debug\netcoreapp2.2\Razor\Pages\Hunting\Details.g.cshtml.cs
+C:\Users\sneak\source\repos\HuntingAppRazor\HuntingAppRazor\obj\Debug\netcoreapp2.2\Razor\Pages\Hunting\Edit.g.cshtml.cs
+C:\Users\sneak\source\repos\HuntingAppRazor\HuntingAppRazor\obj\Debug\netcoreapp2.2\Razor\Pages\Hunting\Index.g.cshtml.cs

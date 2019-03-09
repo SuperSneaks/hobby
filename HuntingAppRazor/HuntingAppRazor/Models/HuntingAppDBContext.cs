@@ -17,11 +17,10 @@ namespace HuntingAppRazor.Models
 
         public virtual DbSet<Hunts> Hunts { get; set; }
         public virtual DbSet<Properties> Properties { get; set; }
+        public virtual DbSet<PropertyAccess> PropertyAccess { get; set; }
         public virtual DbSet<Sightings> Sightings { get; set; }
         public virtual DbSet<Stands> Stands { get; set; }
         public virtual DbSet<Users> Users { get; set; }
-
-        // Unable to generate entity type for table 'dbo.PropertyAccess'. Please see the warning messages.
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -107,6 +106,29 @@ namespace HuntingAppRazor.Models
                 entity.Property(e => e.Zip)
                     .HasColumnName("zip")
                     .HasMaxLength(10);
+            });
+
+            modelBuilder.Entity<PropertyAccess>(entity =>
+            {
+                entity.Property(e => e.Id)
+                    .HasColumnName("id")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.PropertyUuid).HasColumnName("property_uuid");
+
+                entity.Property(e => e.UsersUuid).HasColumnName("users_uuid");
+
+                entity.HasOne(d => d.PropertyUu)
+                    .WithMany(p => p.PropertyAccess)
+                    .HasForeignKey(d => d.PropertyUuid)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_PropertyAccess_Property");
+
+                entity.HasOne(d => d.UsersUu)
+                    .WithMany(p => p.PropertyAccess)
+                    .HasForeignKey(d => d.UsersUuid)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_PropertyAccess_User");
             });
 
             modelBuilder.Entity<Sightings>(entity =>
@@ -211,13 +233,6 @@ namespace HuntingAppRazor.Models
                     .IsRequired()
                     .HasColumnName("username")
                     .HasMaxLength(50);
-            });
-
-            modelBuilder.Entity<PropertyAccess>(entity => 
-            {
-                entity.Property(e => e.UserUuid).HasColumnName("user_uuid").ValueGeneratedNever();
-
-                entity.Property(e => e.PropertyUuid).HasColumnName("property_uuid").ValueGeneratedNever();
             });
         }
     }
