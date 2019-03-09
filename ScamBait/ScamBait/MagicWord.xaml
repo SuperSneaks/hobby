@@ -1,0 +1,9 @@
+﻿<Window x:Class="ScamBait.MagicWord"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        Title="MagicWord" Height="150" Width="300">
+    <Grid>
+        <Image gif:ImageBehavior.AnimatedSource="Images/magicword.gif" />
+    </Grid>
+</Window>
